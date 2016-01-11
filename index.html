@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会议管理系统</title>
+    <script type="text/javascript" src="./js/jquery-1.8.0.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script>
+        $(document).ready(function()
+        {
+
+            setCode();
+            $("#refresh").click(function()
+            {
+                setCode()
+              //  document.location.href="index.html";
+            });
+
+        });
+        var result=0;
+        function setCode() {
+            var a = Math.floor(Math.random() * 20);
+            var b= Math.floor(Math.random() * 20+1);
+            var show=a+"+"+b+"=?";
+            result=a+b;
+           // $("#code1").text(show);
+            $("#code1").val(show);
+
+        }
+
+        function  checkCode()
+        {
+            var re=$("#code").val();
+            if($("#name")=='')
+            {
+                alert("登录信息不完整！");
+                return false;
+            }
+            if($("#pwd").val()=='')
+            {
+                alert("登录信息不完整！");
+                return false;
+            }
+            if(re==result)
+            {
+                return true;
+            }
+            else
+            {
+              alert("验证码错误，请重新输入！");
+                return false;
+                }
+        }
+
+
+
+    </script>
+</head>
+<body>
+<header>
+    <div class="myspan">欢迎,游客9527
+    [ <a href="index.html">登录</a>] [
+     <a href="signin.php">注册</a>]
+    </div>
+    <div class="title"></div>
+    <div class="logo"></div>
+</header>
+
+
+<pagebody>
+    <div class="login">
+        <form method="post" action="userPage.php"  onsubmit="return checkCode()">
+            <h1 class="h1main" align="center"> 用户登录</h1>
+            <div style="position: absolute;top:120px;width: 80%;left:10%;">
+                <div class="ico1" style="float: left"></div>
+                 <div><input  name="name" id="name" maxlength="20" class="inputstyle" style="float: left" placeholder="用户名/邮箱/手机号"></div>
+            </div>
+
+            <div style="position: absolute;top:200px;width: 80%;left:10%;">
+                <div class="ico2" style="float: left"></div>
+                <div><input  name="pwd" id="pwd" maxlength="20" class="inputstyle" style="float: left" placeholder="密码" type="password"></div>
+            </div>
+            <div style="position: absolute;top:280px;width: 70%;left:20%;">
+                <div  style="float: left"> <input name="code" id="code" style="width: 80px; height: 40px;border-radius: 5px;" placeholder="验证码"/></div>
+                <div  style="float: left"><input  name="code1" id="code1" maxlength="20" disabled="true" style="width: 80px;font-size: 20px;  height: 40px;border-radius: 5px; border: hidden" ></div>
+                <div class="ico3" name="refesh" id="refresh" style="float: left"></div>
+            </div>
+            <div style="position: absolute;top:360px;width: 80%;left:18%;">
+               <button type="button" class="logbut" onclick="document.location.href='signin.php'">注册</button>
+                <button type="submit" class="logbut" >登录</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+</pagebody>
+
+
+
+
+<footer>
+    <center><h1 style="color: white;font-size: 12px;">DesignBy:Group SMT,(All Rihgts Reserved)</h1></center>
+</footer>
+</body>
+</html>

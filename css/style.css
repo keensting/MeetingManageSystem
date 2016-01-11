@@ -1,0 +1,365 @@
+/*
+页面背景色
+*/
+body{
+    background-color: gainsboro;
+}
+
+/*
+字体
+*/
+.h1main{
+    color:cyan ;
+    font-size: 25px;
+    width: 60%;
+    position: absolute;
+    top:50px;
+    left: 20%;
+}
+/*
+页面的头
+*/
+header{
+    position: absolute;
+    top:0;
+    height:110px;
+    width: 80%;
+    left:10%;
+    margin: 10px;
+    border-radius: 10px;
+    border: inherit;
+    background-color: cyan;
+    transition:background-color 2s;
+    opacity: .8;
+
+}
+header:hover{
+    background-color: chartreuse;
+
+}
+/*
+显示小组logo
+*/
+.logo{
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border-radius:55px ;
+    border: outset;
+    border-color: white;
+
+    background-image:url("../img/SMT.png");
+    background-size: cover;
+}
+/*
+标题文字
+*/
+.title{
+    position: absolute;
+    height: 110px;
+    width: 500px;
+    left: 160px;
+    background-image: url("../img/title.png");
+}
+
+/*
+提示登录信息
+*/
+.myspan{
+    position:absolute;
+    right: 12%;
+    top:10px;
+    background-color: #ffffff;
+    z-index: 1000;
+    font-size: 20px;
+
+
+}
+/*
+页面的脚
+*/
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 80%;
+    height:30px;
+    left:10%;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: cyan;
+    -moz-transition:  background-color 2s;
+}
+
+footer:hover{
+    background-color:chartreuse;
+}
+/*
+页面主体
+*/
+
+pagebody{
+    position: absolute;
+    margin: 10px;
+    width: 79.5%;
+    top:130px;
+    left: 10%;
+    height:700px;
+    border-radius: 10px;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    border:5px solid white;
+
+
+
+}
+
+/*
+登录框
+*/
+
+.login{
+
+    position: absolute;
+    right: 100px;
+    top:80px;
+    width: 320px;
+    height:480px;
+    background-color: #d9ffd2;
+    border-radius: 10px;
+
+}
+/*
+input框
+*/
+.inputstyle{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+
+
+
+}
+/*
+图标框
+*/
+.ico1{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-image: url("../img/user.png");
+    background-size: cover;
+}
+
+.ico2{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-image: url("../img/lock.png");
+    background-size: cover;
+}
+.ico3{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-image: url("../img/refresh.png");
+    background-size: cover;
+
+
+}
+.ico3:hover{
+   -moz-transform: rotate(720deg) ;
+    -moz-transition-duration: 2s;
+}
+/*
+按钮
+*/
+.logbut{
+    margin: 10px;
+    width: 80px;
+    height: 35px;
+    font-size: 25px;
+    color: white ;
+    background-color: cyan;
+    border-radius: 5px;
+    -moz-transition: background-color 1s;
+}
+.logbut:hover{
+    background-color:lawngreen;
+}
+/*
+ 个人中心
+*/
+.personal{
+    position:absolute;
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    left:15px;
+
+    border-radius: 25px;
+    background-image:url("../img/tips.png") ;
+    background-size: cover;
+    opacity: 0.5;
+    -moz-transition:top 2s, left 2s,opacity 2s ,border-radius 2s;
+}
+
+.personal:hover{
+    top:30px;
+    left:30px;
+    opacity: 1;
+    border-radius: 2px;
+}
+/*
+会议中心
+*/
+.meeting{
+    position:absolute;
+    width: 70px;
+    height: 70px;
+    top: 150px;
+    left:15px;
+
+    border-radius: 25px;
+    background-image:url("../img/meeting.png") ;
+    background-size: cover;
+    opacity: 0.5;
+    -moz-transition:top 2s, left 2s,opacity 2s ,border-radius 2s;
+}
+
+.meeting:hover{
+    top:165px;
+    left:30px;
+    opacity: 1;
+    border-radius: 2px;
+}
+
+/*
+展开项
+*/
+.flow{
+    position: absolute;
+    left:70px;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    padding: 20px;
+    color: #ffffff;
+    border: 3px solid  white;
+}
+.label{
+
+}
+.label:hover{
+    color: cyan;
+
+}
+
+/*
+提示框
+*/
+.inform{
+    position:absolute;
+    top:20px;
+    width: 40%;
+    left:20%;
+    height:400px;
+    background-color: #a6e1ec;
+    border-radius: 10px;
+
+}
+
+/*
+会议预定板
+*/
+.meeting-reserve{
+    position: absolute;
+    width: 69.5%;
+    height:8000px;
+    top:150px;
+    left: 15%;
+    border: 5px solid cyan;
+   background-color: #9acfea;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.meet-item{
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    left:25%;
+    background-color: cyan;
+    border: 5px solid chartreuse ;
+
+
+}
+.meet-item:hover{
+    background-color: chartreuse;
+    border: 5px solid cyan ;
+}
+
+.navileft{
+    position:absolute;
+    left:10px;
+    top:10px;
+    margin: 10px;
+    width: 15%;
+    height: 95%;
+    background-color: #ffc30a;
+    border-radius: 10px;
+}
+.reactboard{
+    position: absolute;
+    left: 17%;
+    top:10px;
+    width: 80%;
+    height: 95%;
+    margin: 10px;
+
+    border: 5px solid #ffc30a;
+}
+
+.alert{
+    position:absolute;
+    width: 70px;
+    height: 40%;
+    letf:10px;
+    top:10px;
+
+
+}
+
+
+.logintips{
+    position: absolute;
+    width: 120px;
+    height:auto;
+    left: 40%;
+    top:150px;
+    border: 5px solid chartreuse;
+    border-radius: 10px;
+
+
+}
+
+
+
+/*
+*个人中心的浮动框
+*/
+.float_box{
+   float: left;
+    background-color: #ffffff;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: 10%;
+    height: 200px;
+    border-radius: 10px;
+    border: 5px solid #eeeeee;
+}
+.box-header {
+    padding-bottom: 9px;
+    margin: 20px 0 10px;
+    border-bottom: 1px solid #eeeeee;
+}

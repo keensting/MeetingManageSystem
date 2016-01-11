@@ -1,0 +1,144 @@
+.logo{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    z-index: 10;
+    border-radius: 200px;
+
+
+
+}
+.img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: yellow;
+    width: 400px;
+    height: 400px;
+    z-index: 10;
+    border-radius: 200px;
+
+
+
+}
+
+.img1 {
+    position: absolute;
+    top: 0px;
+    background-image:url("../img/SMT.png");
+    background-size: cover;
+    left: 0px;
+    background-color: yellow;
+    width: 400px;
+    height: 400px;
+    z-index: 10;
+    border-radius: 200px;
+    -moz-animation: move 2s;
+    -moz-transition: background-color 1s;
+    -moz-animation-timing-function: linear;
+}
+.img1:hover{
+    background-color:cyan;
+
+
+}
+
+@keyframes move {
+    0%{left:500px;background-color: cyan}
+    25%{left:375px;background-color: chartreuse}
+    50%{left:250px;background-color: chocolate}
+    70%{left:125px;background-color: crimson}
+    100%{left:0px}
+}
+.box1{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:150px;
+    width:500px;
+    border-radius: 20px;
+    z-index: 1;
+    opacity: .7;
+    background-color: chartreuse;
+    -moz-animation: boxani1 2s;
+    -moz-animation-timing-function: linear;
+
+
+
+
+}
+@keyframes boxani1 {
+    from{width:0px;border-radius: 0px; }
+    to{width: 400px; border-radius: 20px;}
+}
+@keyframes boxani2 {
+    from{height:0px;border-radius: 0px; }
+    to{height: 400px; border-radius: 20px;}
+}
+
+.box2{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    height:500px;
+    width:150px;
+    background-color: aqua;
+    border-radius: 20px;
+    z-index: 3;
+    opacity: .7;
+    -moz-animation: boxani2 2s;
+    -moz-animation-timing-function: linear;
+
+
+}
+
+
+.box3{
+    position: absolute;
+    top:0px;
+    left:250px;
+    height:500px;
+    width:150px;
+    background-color: coral;
+    border-radius: 20px;
+    z-index: 2;
+    opacity: .7;
+    -moz-animation: boxani2 2s;
+    -moz-animation-timing-function: linear;
+
+
+}
+.box4{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height:150px;
+    z-index: 4;
+    width:500px;
+    opacity: .7;
+    border-radius: 20px;
+    background-color: deeppink ;
+    -moz-animation: boxani1 2s;
+    -moz-animation-timing-function: linear;
+
+
+
+}
+
+.rotate{
+   -moz-animation:rotation ;
+    -moz-animation-delay: 2s;
+
+}
+@keyframes rotation {
+0%{-moz-transform: rotate(0deg)}
+    25%{-moz-transform: rotate(360deg)}
+    50%{-moz-transform: rotate(720deg)}
+    75%{-moz-transform: rotate(1080deg)}
+    100%{-moz-transform: rotate(1440deg)}
+
+
+}

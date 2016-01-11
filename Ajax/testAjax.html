@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="Ajax.js"></script>
+    <script>
+        var xmlHttp=getXmlHttpRequest();
+        function success()
+        {
+            if(xmlHttp.readyState==4)
+            {
+                var response=xmlHttp.responseText;
+                var obj=JSON.parse(response);
+                alert(obj.name);
+
+            }
+        }
+        function ajax()
+        {
+
+
+            var qq=document.getElementById("qq").value;
+
+            sendRequest("test.php",success,"qq="+qq);
+
+
+
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<input id="qq" name="qq">
+<button onclick="ajax()">提交</button>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <script type="text/javascript" src="./js/jquery-1.8.0.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript">
+        function check()
+        {
+            var name=document.getElementById('name').value;
+            var pwd=document.getElementById('pwd').value;
+            if(name==''||pwd=='')
+            {
+                alert ('请填写完整的登录信息!');
+                return false;
+            }
+            else
+            {
+                if(name=="admin"&&pwd=="mko0nji9")
+                {
+
+                    return true;
+                }
+                else
+                {
+                    alert ('登录失败！请确认您的账号和密码!');
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<header style="background-color:#ffc30a">
+    <div class="myspan">管理员您好，请
+        [ <a href="adminLogin.html">登录</a>]
+    </div>
+    <div class="title"></div>
+    <div class="logo"></div>
+</header>
+
+<pagebody style="background-image:none">
+    <div class="container">
+        <div class="page-header">
+            <h3><strong>管理员登录</strong></h3>
+
+        </div>
+        <form method="post" action="./adminPage.php" class="col-md-4" style="border: 2px solid #fff579"  onsubmit="return check();">
+            <div class="form-group">
+                <label > 账号</label>
+                <input class="form-control " id="name" name="name" placeholder="输入管理员账号"  />
+            </div>
+            <div class="form-group">
+                <label > 密码</label>
+                <input class="form-control" id="pwd" name="pwd" type="password" placeholder="输入管理员密码" />
+            </div>
+            <div class="form-group" align="center">
+                <button class="btn btn-default"  type="reset"> 重置</button>
+                <button class="btn btn-default"  type="submit">登录</button>
+            </div>
+        </form>
+
+
+
+    </div>
+
+</pagebody>
+
+<footer style="background-color:#ffc30a">
+    <center><h1 style="color: white;font-size: 12px;">DesignBy:Group SMT,(All Rihgts Reserved)</h1></center>
+</footer>
+
+</body>
+</html>

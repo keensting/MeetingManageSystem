@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <script type="text/javascript" src="./js/jquery-1.8.0.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/welcome.css">
+    <script>
+        $(document).ready(function(){
+                $(".img").hide();
+                $(".img").fadeIn(3000);
+                $(".img1").click(function()
+                {
+                    document.location.href="./index.html";
+                });
+        });
+    </script>
+</head >
+<body style="background-color: darkgray">
+
+<div class="logo">
+    <div class="rotate">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="img"></div>
+    <div class="img1">
+    </div>
+        <h3 style="position: absolute;top:300px;left:95px;color: white"> Touch to Continue</h3>
+    </div>
+
+</div>
+</body>
+</html>
